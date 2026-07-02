@@ -1,0 +1,13 @@
+{
+  "name": "task-tracker",
+  "version": "1.0.0",
+  "description": "task-tracker-cli/\r │\r ├── task-cli.js          # Main entry point\r ├── taskManager.js       # All task logic\r ├── fileHandler.js       # Read/write JSON\r ├── utils.js             # Helper functions\r ├── tasks.json           # Database (created automatically)\r ├── package.json\r ├── README.md\r └── .gitignore",
+  "main": "task-cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
