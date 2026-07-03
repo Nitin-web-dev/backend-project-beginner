@@ -4,11 +4,11 @@ const file = "tasks.json";
 
 let tasksData = [];
 
-console.log(tasksData)
+
 if (fs.existsSync(file)){
     tasksData = JSON.parse(fs.readFileSync(file, "utf-8"));
 }
-console.log(tasksData)
+
 tasksData.push({
     name : process.argv[2],
     data : process.argv[3]

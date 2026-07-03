@@ -1,5 +1,11 @@
-{
-  "name": "Nitin",
-  "age": 22,
-  "city": "Delhi"
-}
+[
+  {
+    "name": "Nitin",
+    "age": 22,
+    "city": "Delhi"
+  },
+  {
+    "name": "add",
+    "data": "add feature test"
+  }
+]
