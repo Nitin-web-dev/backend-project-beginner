@@ -2,7 +2,7 @@ task-tracker-cli/
 │
 ├── task-cli.js          # Main entry point
 ├── taskManager.js       # All task logic
-├── fileHandler.js       # Read/write JSON
+├── fileHandler.js       # Read/write JSON and save data in tasks.json
 ├── utils.js             # Helper functions
 ├── tasks.json           # Database (created automatically)
 ├── package.json

@@ -7,5 +7,9 @@
   {
     "name": "add",
     "data": "add feature test"
+  },
+  {
+    "name": "Buy milk",
+    "data": "2 liters"
   }
 ]

@@ -1,23 +1,10 @@
-const fs = require("fs");
+const {loadTasks, saveTasks } = require("./fileHandler.js");
 
-const file = "tasks.json";
+let tasks = loadTasks(); // load the exist or ya jo pehle se exist ya pehle se json file me data save hai 
 
-let tasksData = [];
+// to do 
+// get input from cli
+// add data into previous tasks
+// save the data 
 
-
-if (fs.existsSync(file)){
-    tasksData = JSON.parse(fs.readFileSync(file, "utf-8"));
-}
-
-tasksData.push({
-    name : process.argv[2],
-    data : process.argv[3]
-    
-})
-console.log(tasksData)
-fs.writeFileSync(file, JSON.stringify(tasksData, null, 2))
-console.log('end')
-
-// console.log(process.argv); // to get input from cli 
-
-
+console.log(tasks)
