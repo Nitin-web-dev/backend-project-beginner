@@ -18,17 +18,21 @@
 
 const { loadTasks, saveTasks } = require("./fileHandler.js");
 
-// todo : error in this function yet to solve it
+
 function AddTasks(message) {
+  const taskList = loadTasks();
+  const currentTaskId = taskList.length + 1;
   const task = {
-    id: tasks.length + 1,
+    id: currentTaskId,
     description: message,
     status: "todo",
     createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
+    
   };
+  // add new task to previous tasklist
+  taskList.push(task);
   // save the data
-  saveTasks(task);
+  saveTasks(taskList);
   return task;
 }
 
