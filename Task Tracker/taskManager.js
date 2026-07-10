@@ -41,7 +41,13 @@ function updateTasksStutus(id, message) {
 }
 
 function deleteTask(id) {
-  // todo
+  // todo get id console it 
+  // console.log(id)
+  // check in list 
+  const updatedTaskList = loadTasks().filter( task => task.id !== id);
+  saveTasks(updatedTaskList);
+  return `id: ${id} deleted `;
+  // filter it and remove it 
 }
 
 function listAllTasks() {
