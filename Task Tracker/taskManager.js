@@ -66,7 +66,8 @@ function listAllTasksNotDone() {
   return list;
 }
 function listAllTasksInProgess() {
-  // todo
+  const list = loadTasks().filter(task => task.status == "in-progress");
+  return list;
 }
 
 module.exports = {
