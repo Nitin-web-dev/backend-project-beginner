@@ -62,7 +62,8 @@ function listAllTasksDone() {
 }
 
 function listAllTasksNotDone() {
-  // todo
+  const list = loadTasks().filter(task => task.status !== "done");
+  return list;
 }
 function listAllTasksInProgess() {
   // todo
