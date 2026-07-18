@@ -36,8 +36,31 @@ function AddTasks(message) {
   return task;
 }
 
-function updateTasksStutus(id, message) {
-  // todo
+function updateTasks(id, message) {
+  const data = loadTasks();
+  const task = data.find(task => task.id == id); // we can also use findIndex get index then directly change then save 
+  if(task){
+    
+      task.description = message;
+      saveTasks(data)
+      
+  }else {
+    return "something went wrong try again  or data don't exits";
+  }
+  
+  return "task updated";
+}
+
+function updateTasksStutus(id, message){
+  const data = loadTasks();
+  const index = data.findIndex(task => task.id == id);
+  if(index == -1){
+    return "task not found ";
+
+  }
+  data[index].status = message;
+  saveTasks(data);
+  return "task updated successfull"
 }
 
 function deleteTask(id) {
@@ -72,6 +95,7 @@ function listAllTasksInProgess() {
 
 module.exports = {
   AddTasks,
+  updateTasks,
   updateTasksStutus,
   deleteTask,
   listAllTasks,
